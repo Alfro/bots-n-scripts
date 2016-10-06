@@ -69,13 +69,10 @@ while(True):
     time.sleep(sleepTime)
     pixels = (pixel_at(909,628), pixel_at(1076,628))
     if pixels[0] == treePixel and pixels[1] == skyPixel:
-        pyautogui.click(rightX, rightY)
-        time.sleep(sleepTime)
-        pyautogui.click(rightX, rightY)
+        pyautogui.press('right')
+        pyautogui.press('right')
     elif pixels[1] == treePixel and pixels[0] == skyPixel:
-        pyautogui.click(leftX, leftY)
-        time.sleep(sleepTime)
-        pyautogui.click(leftX, leftY)
+        pyautogui.press('left')
+        pyautogui.press('left')
     else:
         print "There is something wrong with the pixels. Waiting."
-        time.sleep(sleepTime)
